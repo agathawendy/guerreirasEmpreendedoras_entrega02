@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-bs-theme="dark" xmlns:th="www.thymeleaf.org">
-
-<head th:fragment="headCoust">
+<head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-	<!-- Framework Bootstrap -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<!-- Biblioteca JavaScript -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	<!--CSS Externo -->
-    <link rel="stylesheet" th:href="@{/css/style.css}">
-
-    <!-- Fivecon -->
-    <link rel="shortcut icon" href="../static/img/favicons/Mae.png" type="image/x-icon" />
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
 <body>
@@ -23,23 +11,21 @@
 		<header class="container-fluid navbar navbar-expand-lg bd-navbar fixed-top">
 			<nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap">
 				<!-- Logo navbar -->
-				<a class="navbar-brand mx-auto" href="/">
-					<img class="d-block d-none d-lg-flex" id="navbarLogo" src="../static/img/favicons/Mae.png"
+				<a class="navbar-brand mx-auto" href="/home">
+					<img class="d-block d-none d-lg-flex" id="navbarLogo" src="./img/favicons/Mae.png"
 						alt="Guerreira Empreendedora logo">
 					<small class="d-lg-none ms-2">Guerreira Empreendedora™</small>
 				</a>
-
 				<!-- Botão mobile -->
 				<div class="d-flex">
 					<button class="navbar-toggler border-0 d-lg-none order-3" type="button" data-bs-toggle="offcanvas"
 						data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
-						<img id="togglerLogo" src="./assets/img/favicons/Mae.png" fill="currentColor">
+						<img id="togglerLogo" src="./img/favicons/Mae.png" fill="currentColor">
 					</button>
 				</div>
-
 				<!-- Menu mobile -->
 				<div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar"
-					aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true" aria-modal="true">
+                aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true" aria-modal="true">
 					<!-- Cabeçalho do menu -->
 					<div class="offcanvas-header px-4 pb-0">
 						<h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">
@@ -59,36 +45,28 @@
 							<li class="nav-item col-6 col-lg-auto">
 								<a class="nav-link" aria-current="true" href="/">Home</a>
 							</li>
-
 							<!-- Inspire-se -->
 							<li class="nav-item col-6 col-lg-auto">
 								<a class="nav-link" href="/inspire">Inspire-se</a>
 							</li>
-
 							<!-- Cursos -->
 							<li class="nav-item col-6 col-lg-auto">
 								<a class="nav-link" href="/curso">Cursos</a>
 							</li>
-
 							<!-- Serviços -->
 							<li class="nav-item col-6 col-lg-auto">
 								<a class="nav-link" href="/cadastro">Cadastro</a>
 							</li>
 						</ul>
-
 						<hr class="d-lg-none text-white-50">
 						<!-- Segunda parte da navbar -->
 						<ul class="navbar-nav flex-row flex-wrap ms-md-auto">
-
 							<li class="nav-item col-6 col-lg-auto"><!-- Github -->
 								<a class="nav-link" href="https://github.com/squad037" target="_blank" rel="noopener">
-
 									<svg xmlns="" width="16" height="16" fill="currentColor" class="bi bi-github"
 										viewBox="0 0 16 16">
-
 										<title>Github</title>
-										<path
-											d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+										<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
 									</svg>
 									<small class="d-lg-none ms-2">Github</small>
 								</a>
@@ -97,7 +75,6 @@
 							<li class="nav-item col-6 col-lg-auto"><!-- Linkedin -->
 								<a class="nav-link" href="https://www.linkedin.com/in/squad037/" target="_blank"
 									rel="noopener">
-
 									<svg xmlns="" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
 										viewBox="0 0 16 16">
 
@@ -108,7 +85,6 @@
 									<small class="d-lg-none ms-2">Linkedin</small>
 								</a>
 							</li>
-
 							<li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
 								<div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
 								<hr class="d-lg-none my-2 text-white-50">
@@ -118,7 +94,6 @@
 								<!-- <a class="btn btn-outline-primary" role="button" href="assets/html/login.html">
                                 Login
                             </a> -->
-
 								<a class="btn btn-primary" role="button" href="/login">
 									Entrar
 								</a>
@@ -127,6 +102,7 @@
 					</div>
 				</div>
 			</nav>
+	</header>
 	</div>
 	<!-- Footer -->
 	<div class="container" th:fragment="footer">
@@ -155,4 +131,5 @@
 		</footer>
 	</div>
 </body>
+
 </html>

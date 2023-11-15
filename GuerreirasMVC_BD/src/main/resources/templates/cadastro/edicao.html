@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-bs-theme="dark"  xmlns:th="www.thymeleaf.org">
-
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,24 +14,23 @@
 		crossorigin="anonymous"></script>
 
 	<!-- CSS Externo -->
-	<link rel="stylesheet" href="../assets/css/cadastre-se.css">
+	<link rel="stylesheet" href="../css/cadastre-se.css">
 
 	<!-- Fivecon -->
-	<link rel="shortcut icon" href="../assets/img/favicons/Mae.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="../img/favicons/Mae.png" type="image/x-icon" />	
 	<title>Editar Cadastro</title>
 </head>
 
 <body>
 	<!-- Navbar -->
 	<div th:replace="base :: navlinks"> </div>
-	 <!-- CORPO -->
+	<!-- CORPO -->
 	<main class="container">
-		<div class="row">
+		<div class="row" id="paraBaixo">
 			<div class="col-sm-12">
 				<h1>Editar Cadastro</h1>
 			</div>
 		</div>
-
 		<div class="row">
 			<div class="col-sm-12">
 				<form method="POST" th:object="${cadastro}" enctype="multipart/form-data">
@@ -66,7 +64,6 @@
 						<label for="senha" class="form-label">Senha</label>
 						<input type="password" class="form-control" id="senha" th:field="*{senha}">
 					</div>
-
 					<br>
 					<button type="submit" class="btn btn-primary">Salvar</button>
 				</form>
@@ -74,7 +71,7 @@
 		</div>
 	</main>
 	<!-- RODAPÉ -->
-	<div class="container" th:replace="base :: footer"></div>
+	<div class="container" th:replace="base :: footer"></div>	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
 		crossorigin="anonymous"></script>

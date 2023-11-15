@@ -38,10 +38,10 @@ public class PageController {
 		return "course";
 	}
 	
-	@RequestMapping("/cadastro")
-	public String cadastro(){
-		return "cadastro";
-	}
+////	@RequestMapping("/cadastro")
+////	public String cadastro(){
+////		return "cadastro";
+//	}
 	@RequestMapping("/login")
 	public String login(){
 		return "login";

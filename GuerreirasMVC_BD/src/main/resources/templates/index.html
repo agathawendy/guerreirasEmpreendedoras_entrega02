@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-bs-theme="dark"  xmlns:th="www.thymeleaf.org">
+<html lang="pt-BR" data-bs-theme="dark">
 
-<head th:replace="base :: headCoust">
-      <title> Inicio | Guerreira Empreendedora™ </title>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Framework Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+   
+    <!-- Biblioteca JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- Fivecon -->
+    <link rel="shortcut icon" href="./img/favicons/Mae.png" type="image/x-icon" />
+    <title> Inicio | Guerreira Empreendedora™ </title>
 </head>
+
 <body>
-	<!-- Navbar -->
-	<div th:replace="base :: navlinks"> </div>
+    <!-- Navbar -->
+   <div th:replace="base :: navlinks"> </div>
+
     <!-- CORPO -->
     <main>
         <!-- Carousel -->
@@ -38,10 +55,11 @@
                                 Empoderando mães, Transformando Negócios!
                             </p>
 
-                            <p><a class="btn btn-lg btn-primary" href="./assets/html/cadastre.html">cadastre-se</a></p>
+                            <p><a class="btn btn-lg btn-primary" href="/cadastro">cadastre-se</a></p>
                         </div>
                     </div>
                 </div>
+
                 <!-- Segundo slide -->
                 <div class="carousel-item carousel-item-next carousel-item-start">
                     <svg class="bd-placeholder-img" id="slide2" width="100%" height="100%"
@@ -57,7 +75,7 @@
                                 Empoderando mães, Transformando Negócios!.
                             </p>
 
-                            <p><a class="btn btn-lg btn-primary" href="/assets/html/login.html">Cadastre-se</a></p>
+                            <p><a class="btn btn-lg btn-primary" href="/login">Cadastre-se</a></p>
                         </div>
                     </div>
                 </div>
@@ -76,7 +94,7 @@
                             <p class="opacity-7Empoderando mães, Transformando Negócios!5">
                                 Empoderando mães, Transformando Negócios!
 
-                            <p><a class="btn btn-lg btn-primary" href="./assets/html/cadastre.html">Cadastre-se</a></p>
+                            <p><a class="btn btn-lg btn-primary" href="/cadastro">Cadastre-se</a></p>
                         </div>
                     </div>
                 </div>
@@ -105,6 +123,7 @@
                             <p>Nossa missão é capacitar mulheres empreendedoras a alcançarem seu pleno potencial,
                                 fornecendo recursos, orientação e uma comunidade de apoio que as ajudem a superar
                                 barreiras, conquistar objetivos ambiciosos e criar negócios de sucesso.
+
                         </div>
                     </div>
 
@@ -135,7 +154,9 @@
                 </div>
             </div>
         </div>
+
         <!-- Sobre -->
+
         <div id="jumboton" class="container border-5 text-white p-3 rounded my-4">
             <h2>Sobre</h2>
             <hr>
@@ -159,10 +180,11 @@
         <div class="container">
             <button id="button-jumbotron"  onclick="document.getElementById('jumboton').classList.remove('invisible')">Mostrar</button>
             <button onclick="document.getElementById('jumboton').classList.add('invisible')">Ocultar</button>
-     </div> 
+        
     </main>
     <!-- RODAPÉ -->
-    <div class="container" th:replace="base :: footer"></div>       
+    <div class="container" th:replace="base :: footer"></div>
+
 </body>
 
 </html>
